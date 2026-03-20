@@ -6,7 +6,7 @@ This project presents the **modelling, simulation, and control** of an autonomou
 
 The system is designed to perform multiple driving and parking maneuvers, including forward driving, arc-based parking, and reverse parking, both **with and without a trailer**.
 
-**This project demonstrates how control systems and vehicle kinematics can be combined to enable autonomous navigation and parking.**
+**This project reflects core concepts used in autonomous driving systems, including vehicle modelling, control, and trajectory tracking.**
 
 ---
 
@@ -89,6 +89,23 @@ The system successfully:
 
 ---
 
+## ▶️ How to Run
+
+1. Open the Simulink model from the `models/` folder
+2. Set the maneuver selection variable:
+
+   ```matlab
+   manselect = 1; % choose from 1–6
+   ```
+3. Run the simulation
+4. Run the plotting script:
+
+   ```matlab
+   plot_trajectory
+   ```
+
+---
+
 ## 📈 Key Observations
 
 * PID tuning is critical for stable motion
@@ -103,14 +120,15 @@ The system successfully:
 * The full system is implemented in **Simulink**
 * MATLAB scripts are used for:
 
-  * trajectory plotting
-  * visualization of vehicle motion
-  * validation of maneuver success
+  * trajectory visualization
+  * vehicle geometry rendering
+  * maneuver validation
 
-Files are available in:
+Project structure:
 
 * `models/` → Simulink model
 * `scripts/` → MATLAB code
+* `results/` → output visualizations
 
 ---
 
@@ -124,9 +142,9 @@ Files are available in:
 ## 🚧 Future Improvements
 
 * Model predictive control (MPC) for advanced trajectory planning
-* Sensor integration (e.g., LiDAR, camera-based perception)
-* Real-time implementation on embedded systems
-* Obstacle avoidance and dynamic environments
+* Sensor integration (LiDAR, camera-based perception)
+* Obstacle avoidance in dynamic environments
+* Real-time deployment on embedded systems
 
 ---
 
